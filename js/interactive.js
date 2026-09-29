@@ -107,19 +107,19 @@
           <p class="muted" style="font-size:0.88rem;margin-bottom:1rem;">Question 1 sur 3 · Répondez en un clic.</p>
           <div class="quiz-options">
             <button class="quiz-opt-btn" onclick="window.quizAnswer('goal', 'career', 'excel')">
-              <span>📊 Être plus efficace au bureau & monter en grade</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px;"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg> Être plus efficace au bureau & monter en grade</span>
               <span>&rarr;</span>
             </button>
             <button class="quiz-opt-btn" onclick="window.quizAnswer('goal', 'sales', 'marketing')">
-              <span>📱 Vendre mes produits en ligne & sur WhatsApp</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px;"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg> Vendre mes produits en ligne & sur WhatsApp</span>
               <span>&rarr;</span>
             </button>
             <button class="quiz-opt-btn" onclick="window.quizAnswer('goal', 'business', 'pack-entrepreneur')">
-              <span>🚀 Lancer mon activité complète de A à Z</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px;"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-3.05 11a22.35 22.35 0 0 1-3.95 2z"/></svg> Lancer mon activité complète de A à Z</span>
               <span>&rarr;</span>
             </button>
             <button class="quiz-opt-btn" onclick="window.quizAnswer('goal', 'design', 'canva')">
-              <span>🎨 Créer des visuels & affiches pros en 10 minutes</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px;"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.5-.68 1.5-1.5 0-.42-.17-.82-.46-1.12-.29-.3-.46-.72-.46-1.18 0-.92.68-1.5 1.5-1.5H16c3.3 0 6-2.7 6-6 0-5.5-4.5-9.7-10-9.7z"/></svg> Créer des visuels & affiches pros en 10 minutes</span>
               <span>&rarr;</span>
             </button>
           </div>
@@ -131,15 +131,15 @@
           <p class="muted" style="font-size:0.88rem;margin-bottom:1rem;">Question 2 sur 3 · Nos formations sont modulaires.</p>
           <div class="quiz-options">
             <button class="quiz-opt-btn" onclick="window.quizNextStep(3)">
-              <span>⚡ 10 à 15 minutes (depuis mon smartphone)</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> 10 à 15 minutes (depuis mon smartphone)</span>
               <span>&rarr;</span>
             </button>
             <button class="quiz-opt-btn" onclick="window.quizNextStep(3)">
-              <span>⏱️ 30 à 45 minutes par jour</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 30 à 45 minutes par jour</span>
               <span>&rarr;</span>
             </button>
             <button class="quiz-opt-btn" onclick="window.quizNextStep(3)">
-              <span>📅 Quelques heures le week-end</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Quelques heures le week-end</span>
               <span>&rarr;</span>
             </button>
           </div>
@@ -151,15 +151,15 @@
           <p class="muted" style="font-size:0.88rem;margin-bottom:1rem;">Question 3 sur 3 · Accès immédiat garanti.</p>
           <div class="quiz-options">
             <button class="quiz-opt-btn" onclick="window.quizShowResult()">
-              <span>📲 Uniquement sur smartphone (Android / iPhone)</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px;"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg> Uniquement sur smartphone (Android / iPhone)</span>
               <span>Terminer &rarr;</span>
             </button>
             <button class="quiz-opt-btn" onclick="window.quizShowResult()">
-              <span>💻 Sur ordinateur portable ou de bureau</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px;"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg> Sur ordinateur portable ou de bureau</span>
               <span>Terminer &rarr;</span>
             </button>
             <button class="quiz-opt-btn" onclick="window.quizShowResult()">
-              <span>🔄 Les deux selon mon emploi du temps</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px;"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l5.64 4.36A9 9 0 0 0 20.49 15"/></svg> Les deux selon mon emploi du temps</span>
               <span>Terminer &rarr;</span>
             </button>
           </div>
@@ -167,7 +167,9 @@
 
         <div class="quiz-modal-step" data-step="result">
           <div style="text-align:center;padding:1rem 0;">
-            <span style="font-size:2.4rem;">🎯</span>
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(16,185,129,0.12);color:var(--acc);display:grid;place-items:center;margin:0 auto 0.8rem;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
             <span class="calli-badge" style="margin:0.5rem auto;display:table;">Votre recommandation personnalisée</span>
             <h2 id="quiz-result-title" style="font-size:1.45rem;margin:0.6rem 0 0.4rem;"></h2>
             <p id="quiz-result-desc" class="muted" style="font-size:0.92rem;margin-bottom:1.2rem;"></p>

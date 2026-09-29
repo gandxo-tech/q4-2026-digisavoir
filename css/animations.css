@@ -321,3 +321,81 @@
     bottom: 5rem;
   }
 }
+
+/* 7. Staggered Reveal-On-Scroll Logic */
+.rv-stagger > * {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--stagger-index, 0) * 85ms);
+  will-change: opacity, transform;
+}
+
+.rv-stagger.in > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.grid > .card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  transition-delay: calc(var(--stagger-index, 0) * 75ms);
+}
+
+.grid.in > .card,
+.rv.in .grid > .card,
+.rv.in.grid > .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.steps > li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--stagger-index, 0) * 110ms);
+}
+
+.steps.in > li,
+.rv.in .steps > li,
+.rv.in.steps > li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reviews > .review {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--stagger-index, 0) * 90ms);
+}
+
+.reviews.in > .review,
+.rv.in .reviews > .review,
+.rv.in.reviews > .review {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.plans > .plan {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--stagger-index, 0) * 100ms);
+}
+
+.plans.in > .plan,
+.rv.in .plans > .plan,
+.rv.in.plans > .plan {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rv-stagger > *, .grid > .card, .steps > li, .reviews > .review, .plans > .plan {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
