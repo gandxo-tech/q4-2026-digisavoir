@@ -51,6 +51,16 @@
 }
 
 /* 2. Micro-écriture / Typewriter animation */
+#typewriter-text {
+  display: inline-block;
+  min-height: 1.25em;
+  vertical-align: top;
+}
+@media (max-width: 480px) {
+  #typewriter-text {
+    min-height: 2.4em; /* Pre-allocate space for 2 lines on mobile screens */
+  }
+}
 .typewriter-cursor {
   display: inline-block;
   width: 3px;
