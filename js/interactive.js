@@ -296,4 +296,40 @@
     }
   });
 
+  // 5. Dynamic 3D Tilt Effect on Product Card Hover
+  let activeTiltCard = null;
+  document.addEventListener('mousemove', function(e) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const card = e.target.closest('.card');
+    if (!card) {
+      if (activeTiltCard) {
+        activeTiltCard.style.transform = '';
+        activeTiltCard = null;
+      }
+      return;
+    }
+
+    if (activeTiltCard && activeTiltCard !== card) {
+      activeTiltCard.style.transform = '';
+    }
+    activeTiltCard = card;
+
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -6; // max -6deg to +6deg tilt
+    const rotateY = ((x - centerX) / centerX) * 6;  // max -6deg to +6deg tilt
+
+    card.style.transform = `perspective(1000px) translateY(-10px) scale(1.035) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
+  });
+
+  document.addEventListener('mouseleave', function() {
+    if (activeTiltCard) {
+      activeTiltCard.style.transform = '';
+      activeTiltCard = null;
+    }
+  }, true);
+
 })();

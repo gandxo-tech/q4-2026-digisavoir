@@ -392,10 +392,29 @@
   transform: translateY(0);
 }
 
+.grid {
+  perspective: 1000px;
+}
+
+.card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.card:hover {
+  transform: perspective(1000px) translateY(-8px) scale(1.03) rotateX(2.5deg) rotateY(-2.5deg);
+  box-shadow: 0 24px 50px -16px rgba(15, 23, 42, 0.22), 0 10px 24px -8px rgba(37, 99, 235, 0.16);
+  border-color: rgba(37, 99, 235, 0.4);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rv-stagger > *, .grid > .card, .steps > li, .reviews > .review, .plans > .plan {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+  .card:hover {
+    transform: none !important;
   }
 }
