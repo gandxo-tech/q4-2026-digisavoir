@@ -15,6 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/animations.css">
 <link rel="preload" as="image" href="img/hero.webp" fetchpriority="high">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Store", "name": "DigiSavoir", "description": "Cyber Monday le 30 novembre 2026 : formations Excel, marketing digital, e-commerce, Canva, anglais pro et comptabilité à -50 %. Accès immédiat, à vie, certificat inclus.", "address": {"@type": "PostalAddress", "addressLocality": "Cotonou", "addressCountry": "BJ"}, "currenciesAccepted": "XOF", "paymentAccepted": "Mobile Money, paiement à la livraison"}, {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "Product", "name": "Excel : du débutant au tableau de bord", "image": "img/excel.webp", "description": "Formules, tableaux croisés dynamiques, graphiques et un tableau de bord de ventes complet. Fichiers d'exercices inclus.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.8, "reviewCount": 2140}, "offers": {"@type": "Offer", "price": "14900", "priceCurrency": "XOF", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-11-30"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "Product", "name": "Marketing digital & WhatsApp Business", "image": "img/marketing.webp", "description": "Facebook, Instagram, TikTok et WhatsApp Business : attirer des clients avec un petit budget publicitaire.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.7, "reviewCount": 1605}, "offers": {"@type": "Offer", "price": "19900", "priceCurrency": "XOF", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-11-30"}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "Product", "name": "Créer sa boutique en ligne sans coder", "image": "img/boutique.webp", "description": "De l'idée à la première vente : fiches produits, photos au smartphone, paiement Mobile Money, livraison.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.8, "reviewCount": 980}, "offers": {"@type": "Offer", "price": "24900", "priceCurrency": "XOF", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-11-30"}}}, {"@type": "ListItem", "position": 4, "item": {"@type": "Product", "name": "Canva pro : visuels qui vendent", "image": "img/canva.webp", "description": "Affiches, statuts WhatsApp, posts et flyers professionnels en 10 minutes. 60 modèles offerts.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 1330}, "offers": {"@type": "Offer", "price": "9900", "priceCurrency": "XOF", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-11-30"}}}, {"@type": "ListItem", "position": 5, "item": {"@type": "Product", "name": "Anglais professionnel en 60 jours", "image": "img/anglais.webp", "description": "10 minutes par jour pour tenir une réunion, écrire un e-mail et passer un entretien en anglais.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.6, "reviewCount": 870}, "offers": {"@type": "Offer", "price": "17900", "priceCurrency": "XOF", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-11-30"}}}, {"@type": "ListItem", "position": 6, "item": {"@type": "Product", "name": "Comptabilité simplifiée OHADA", "image": "img/compta.webp", "description": "Tenir sa comptabilité de petite entreprise selon le référentiel SYSCOHADA, avec des modèles Excel prêts à l'emploi.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.7, "reviewCount": 640}, "offers": {"@type": "Offer", "price": "16900", "priceCurrency": "XOF", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-11-30"}}}, {"@type": "ListItem", "position": 7, "item": {"@type": "Product", "name": "Pack Entrepreneur (3 formations)", "image": "", "description": "Créer sa boutique + Marketing digital + Excel, et une session de coaching live de groupe chaque mois pendant 3 mois.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 512}, "offers": {"@type": "Offer", "price": "49900", "priceCurrency": "XOF", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-11-30"}}}]}]}</script>
 <style>
@@ -288,33 +289,75 @@ p{margin:0 0 1em}
 </head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
-<div class="promo" role="region" aria-label="Offre en cours"><span>Cyber Monday · -50 % sur toutes les formations</span><span class="dm">·</span><span class="dm">Accès immédiat après commande</span></div>
+<div class="promo" role="region" aria-label="Offre en cours">
+  <span>⚡ Cyber Monday · -50 % sur toutes les formations jusqu'à 23 h 59</span>
+  <span class="dm">·</span>
+  <span>Code : <button data-copy="SAVOIR10" title="Cliquer pour copier">SAVOIR10</button> (-10 % extra)</span>
+  <span class="dm">·</span>
+  <span>Accès immédiat garanti</span>
+</div>
 <header class="hdr"><div class="wrap">
 <a class="logo" href="#/" aria-label="DigiSavoir, accueil"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="var(--sec)"/><path d="M11 12h9a8 8 0 010 16h-9z" fill="none" stroke="#fff" stroke-width="3.5"/><circle cx="29" cy="12" r="4" fill="var(--acc)"/></svg><span>Digi<span style="color:var(--sec)">Savoir</span></span></a>
 <nav class="nav" aria-label="Navigation principale"><a href="#/boutique">Formations</a><a href="#formules">Formules</a><a href="#comment">Comment ça marche</a><a href="#avis">Avis</a></nav>
-<button class="cart-btn" data-open-cart aria-label="Ouvrir le panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-label">Panier</span><span class="cart-count">0</span></button>
+<div style="display:flex;gap:.6rem;align-items:center;margin-left:auto">
+  <button class="btn btn-ghost btn-sm" onclick="window.openDigiQuiz()" style="font-weight:700">Quiz (30 s)</button>
+  <button class="cart-btn" data-open-cart aria-label="Ouvrir le panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-label">Panier</span><span class="cart-count">0</span></button>
+</div>
 </div></header>
 <main id="main">
 <div data-view="home">
 <section class="hero"><div class="wrap hero-in">
  <div>
-  <span class="pill"><i></i>Cyber Monday · 30 novembre 2026</span>
-  <h1>Apprenez un métier du digital. <span class="hl">-50 %</span> aujourd'hui seulement.</h1>
-  <p class="lead">Excel, marketing, e-commerce, Canva, anglais, comptabilité. Des formations courtes en français, pensées pour l'Afrique de l'Ouest. Accès immédiat et à vie.</p>
-  <div class="hero-cta"><a class="btn btn-acc" href="#/boutique">Voir les formations</a><a class="btn btn-ghost" href="#formules">Comparer les formules</a></div>
-  <ul class="checks"><li>Accès immédiat</li><li>Certificat</li><li>Remboursé 14 jours</li></ul>
+  <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-bottom:0.8rem;">
+    <span class="pill"><i class="pulse-dot"></i>Cyber Monday · 30 novembre 2026</span>
+    <span class="calli-badge">Accès à vie & certificat inclus</span>
+  </div>
+  <h1 tabindex="-1">Apprenez un métier du digital.<br><span class="calli-wrap"><span class="hl">-50 %</span><svg class="calli-underline" viewBox="0 0 200 12" fill="none" aria-hidden="true"><path d="M4 8C60 2 140 2 196 9"/></svg></span> <br><span id="typewriter-text" style="color:var(--sec)">pour booster vos revenus à Cotonou.</span><span class="typewriter-cursor"></span></h1>
+  <p class="lead">Grâce à DigiSavoir, maîtrisez Excel, le marketing WhatsApp, l'e-commerce et Canva en 14 jours, sans jargon complexe ni peur de la technique. Formations pratiques conçues pour le Bénin et l'Afrique de l'Ouest.</p>
+  <div class="hero-cta">
+    <a class="btn btn-acc" href="#/boutique">Choisir ma formation</a>
+    <button class="btn btn-ghost" onclick="window.openDigiQuiz()">Faire le quiz (30 s)</button>
+    <a class="btn btn-ghost" href="#formules">Comparer les formules</a>
+  </div>
+  <ul class="checks"><li>Accès immédiat sur smartphone</li><li>Certificat vérifiable en 1 clic</li><li>Remboursé 14 jours</li></ul>
   <div class="hero-cd"><span class="cd-label" data-cd-label></span><div class="cd" data-cd></div></div>
  </div>
  <div class="hero-vis">
-  <img src="img/hero.webp" alt="Jeune femme suivant une formation sur son ordinateur portable" width="1600" height="900" fetchpriority="high">
-  <div class="float f1"><b>12 480</b><span>apprenants</span></div>
-  <div class="float f2"><span class="stars">★★★★★</span><b>4,8/5</b><span>7 565 avis</span></div>
+  <img src="img/hero.webp" alt="Jeune femme professionnelle d'Afrique de l'Ouest suivant sa formation en ligne sur son ordinateur portable" width="1600" height="900" fetchpriority="high">
+  <div class="float f1"><b>12 480</b><span>professionnels formés</span></div>
+  <div class="float f2"><span class="stars">★★★★★</span><b>4,8/5</b><span>7 565 avis vérifiés</span></div>
  </div>
 </div></section>
+
+<!-- Micro-défilement : Marquee de réassurance et partenaires -->
+<div class="marquee-container" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Accès immédiat par WhatsApp & e-mail</span>
+    <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Certificat vérifiable par QR code</span>
+    <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> Satisfait ou remboursé 14 jours</span>
+    <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg> 100 % adapté smartphone Android & iPhone</span>
+    <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg> Paiement MTN MoMo, Moov Money, Wave, Orange Money</span>
+  </div>
+  <div class="marquee-track" aria-hidden="true">
+    <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Accès immédiat par WhatsApp & e-mail</span>
+    <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Certificat vérifiable par QR code</span>
+    <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> Satisfait ou remboursé 14 jours</span>
+    <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg> 100 % adapté smartphone Android & iPhone</span>
+    <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg> Paiement MTN MoMo, Moov Money, Wave, Orange Money</span>
+  </div>
+</div>
 
 <section class="logos"><div class="wrap"><p>Nos apprenants travaillent chez</p><div class="lg"><span>Banque Atlantique*</span><span>Startup Lab</span><span>Groupe Sahel</span><span>ONG Terra</span><span>Boutiques Nana</span></div><p class="tiny">* Marques fictives</p></div></section>
 
 <section class="sec"><div class="wrap">
+ <div class="quiz-banner rv">
+   <div class="quiz-banner-text">
+     <span class="calli-badge">Orientation express en 30 s</span>
+     <h3>Hésitation entre deux formations ?</h3>
+     <p>Répondez à 3 questions rapides pour trouver la compétence la plus rentable selon votre situation à Cotonou ou dans la sous-région.</p>
+   </div>
+   <button class="btn btn-acc" onclick="window.openDigiQuiz()">Faire le quiz (30 s) &rarr;</button>
+ </div>
  <div class="sec-h rv"><div><span class="eyebrow">Formations</span><h2>Les plus demandées ce Cyber Monday</h2></div><a class="btn btn-ghost btn-sm" href="#/boutique">Tout voir</a></div>
  <div class="grid rv" data-grid="excel,marketing,boutique,canva"></div>
 </div></section>
@@ -325,6 +368,41 @@ p{margin:0 0 1em}
   <div class="plan"><h3>Une formation</h3><p class="muted">Pour une compétence précise</p><div class="pp"><b>dès 9 900 F</b><s>19 900 F</s></div><ul><li>Accès à vie</li><li>Exercices corrigés</li><li>Certificat</li><li class="no">Coaching live</li></ul><a class="btn btn-ghost btn-block" href="#/boutique">Choisir ma formation</a></div>
   <div class="plan star"><span class="ribbon">Le plus choisi</span><h3>Pack Entrepreneur</h3><p class="muted">Lancer et faire grandir son activité</p><div class="pp"><b>49 900 F</b><s>119 700 F</s></div><ul><li>3 formations (21 h)</li><li>3 certificats</li><li>Coaching live mensuel, 3 mois</li><li>Groupe WhatsApp privé</li></ul><button class="btn btn-acc btn-block" data-add="pack-entrepreneur">Obtenir le pack</button></div>
   <div class="plan"><h3>Équipe</h3><p class="muted">Entreprises et ONG, dès 5 personnes</p><div class="pp"><b>Sur devis</b></div><ul><li>Toutes les formations</li><li>Suivi de progression</li><li>Facture pro</li><li>Session live dédiée</li></ul><a class="btn btn-ghost btn-block" href="https://wa.me/22990000000?text=Bonjour%20DigiSavoir%2C%20devis%20%C3%A9quipe" target="_blank" rel="noopener">Demander un devis</a></div>
+ </div>
+</div></section>
+
+<section class="sec" id="simulateur" style="background:#fff;border-block:1px solid var(--line)"><div class="wrap">
+ <div class="sec-h rv">
+  <div>
+   <span class="eyebrow">Calculateur d'impact</span>
+   <h2>Estimez votre progression concrète</h2>
+  </div>
+  <span class="calli-badge">Orientation personnalisée</span>
+ </div>
+ <div class="rv" id="sim-app" style="background:var(--bg);border:1.5px solid var(--line);border-radius:20px;padding:clamp(1.2rem,3vw,2rem)">
+  <label style="font-weight:700;font-size:0.95rem;display:block;margin-bottom:0.8rem">Sélectionnez votre profil actuel :</label>
+  <div class="chips" id="sim-chips" role="tablist" style="margin-bottom:1.5rem">
+    <button class="chip" data-sim="admin" aria-pressed="true">💼 Assistant(e) & Gestionnaire</button>
+    <button class="chip" data-sim="commerce" aria-pressed="false">🛍️ Commerçant(e) & E-commerçant</button>
+    <button class="chip" data-sim="freelance" aria-pressed="false">⚡ Freelance & Créateur</button>
+    <button class="chip" data-sim="etudiant" aria-pressed="false">🎓 Étudiant(e) & Reconversion</button>
+  </div>
+  <div id="sim-result" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.4rem">
+    <div>
+      <span class="muted" style="font-size:0.8rem;text-transform:uppercase;font-weight:700;letter-spacing:0.05em">⏱️ Temps gagné par semaine</span>
+      <div id="sim-time" style="font-family:var(--fd);font-size:1.6rem;font-weight:800;color:var(--sec);margin:0.3rem 0">4 à 6 heures</div>
+      <p id="sim-time-sub" class="muted" style="font-size:0.85rem;margin:0">Fini les ressaisies manuelles et les calculs sur papier brouillon.</p>
+    </div>
+    <div>
+      <span class="muted" style="font-size:0.8rem;text-transform:uppercase;font-weight:700;letter-spacing:0.05em">🎯 Compétence prioritaire</span>
+      <div id="sim-skill" style="font-family:var(--fd);font-size:1.3rem;font-weight:800;color:var(--fg);margin:0.3rem 0">Excel & Tableaux croisés</div>
+      <p id="sim-skill-sub" class="muted" style="font-size:0.85rem;margin:0">Tableau de bord de suivi automatique, formules SI & RECHERCHEX.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center">
+      <span class="muted" style="font-size:0.8rem;text-transform:uppercase;font-weight:700;letter-spacing:0.05em">🚀 Formation recommandée</span>
+      <a id="sim-link" class="btn btn-acc btn-block" style="margin-top:0.5rem" href="#/produit/excel">Découvrir Excel (14 900 FCFA)</a>
+    </div>
+  </div>
  </div>
 </div></section>
 
@@ -343,12 +421,45 @@ p{margin:0 0 1em}
 </div></section>
 
 <section class="sec" id="faq"><div class="wrap">
- <div class="sec-h rv"><h2>Questions fréquentes</h2></div>
+ <div class="sec-h rv"><div><span class="eyebrow">Transparence</span><h2>Vos questions, nos réponses sans détour</h2></div></div>
  <div class="faq rv">
-  <details><summary>Combien de temps ai-je accès ?</summary><p>À vie, mises à jour comprises. Vous pouvez télécharger les vidéos pour les regarder sans connexion.</p></details>
-  <details><summary>Faut-il un ordinateur ?</summary><p>Non pour le marketing, Canva et l'anglais : tout se suit sur smartphone. Oui pour Excel et la comptabilité (exercices sur fichier).</p></details>
-  <details><summary>Le certificat est-il reconnu ?</summary><p>C'est un certificat de réussite DigiSavoir, vérifiable en ligne par QR code. Ce n'est pas un diplôme d'État.</p></details>
-  <details><summary>Et si la formation ne me convient pas ?</summary><p>Remboursement intégral sous 14 jours si vous avez suivi moins de 30 % du contenu. (Site de démonstration : aucun paiement n'est encaissé.)</p></details>
+  <details open><summary>Combien de temps ai-je accès et puis-je réviser sans connexion ?</summary><p>Vous bénéficiez d'un <strong>accès à vie</strong>, mises à jour futures comprises. Vous pouvez télécharger les leçons et fiches pratiques pour les consulter hors-ligne lors des coupures d'électricité ou de connexion Internet.</p></details>
+  <details><summary>Faut-il obligatoirement un ordinateur ?</summary><p><strong>Non pour la majorité des modules :</strong> Marketing digital, WhatsApp Business, Canva pro et Anglais professionnel se suivent à 100 % sur smartphone (Android ou iPhone). Un ordinateur est recommandé uniquement pour Excel et la Comptabilité OHADA afin de manipuler les fichiers d'exercices.</p></details>
+  <details><summary>Les remises Cyber Monday sont-elles réelles ?</summary><p><strong>Absolument :</strong> nos prix barrés correspondent strictement au tarif normal des 30 derniers jours (ex. 29 900 FCFA pour Excel, remisé à 14 900 FCFA). Cette remise de 50 % n'est valable que le 30 novembre 2026 jusqu'à 23 h 59 (heure de Cotonou).</p></details>
+  <details><summary>Comment payer en Mobile Money sans carte bancaire ?</summary><p>Le règlement s'effectue en quelques secondes par <strong>MTN MoMo, Moov Money, Wave ou Orange Money</strong> en FCFA. Dès validation, vos identifiants d'accès personnalisés vous sont expédiés instantanément par e-mail et sur votre WhatsApp.</p></details>
+  <details><summary>Le certificat est-il valorisable sur le marché du travail ?</summary><p>Chaque certificat délivré comporte un <strong>QR code unique et vérifiable</strong> attestant de la réussite de vos projets pratiques. Vous pouvez l'intégrer directement sur votre CV et votre profil LinkedIn.</p></details>
+  <details><summary>Et si la formation ne me convient pas ?</summary><p>Vous êtes protégé par notre <strong>garantie 14 jours satisfait ou remboursé</strong>. Si le contenu ne correspond pas à vos attentes, un simple message WhatsApp suffit pour être remboursé intégralement.</p></details>
+ </div>
+
+ <div class="guarantee-box rv">
+  <div class="guarantee-item">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+    <div>
+      <strong>Garantie 14 jours</strong>
+      <span>Testez sans risque financier.</span>
+    </div>
+  </div>
+  <div class="guarantee-item">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+    <div>
+      <strong>100 % sur smartphone</strong>
+      <span>Apprenez où et quand vous voulez.</span>
+    </div>
+  </div>
+  <div class="guarantee-item">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+    <div>
+      <strong>Certificat vérifiable</strong>
+      <span>Un badge professionnel par QR code.</span>
+    </div>
+  </div>
+  <div class="guarantee-item">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8z"/></svg>
+    <div>
+      <strong>Mobile Money direct</strong>
+      <span>MoMo, Moov, Wave, Orange Money.</span>
+    </div>
+  </div>
  </div>
 </div></section>
 
@@ -365,7 +476,7 @@ p{margin:0 0 1em}
 <div class="ftr-grid">
 <div><a class="logo" href="#/"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="var(--sec)"/><path d="M11 12h9a8 8 0 010 16h-9z" fill="none" stroke="#fff" stroke-width="3.5"/><circle cx="29" cy="12" r="4" fill="var(--acc)"/></svg><span>Digi<span style="color:var(--sec)">Savoir</span></span></a><p class="muted" style="margin-top:1rem;max-width:34ch">Des formations pratiques en français, pensées pour l'Afrique de l'Ouest. À votre rythme, sur mobile.</p></div>
 <div><h4>Boutique</h4><ul><li><a href="#/produit/excel">Excel</a></li><li><a href="#/produit/marketing">Marketing digital</a></li><li><a href="#/produit/boutique">Créer sa boutique</a></li><li><a href="#/produit/pack-entrepreneur">Pack Entrepreneur</a></li></ul></div>
-<div><h4>Aide</h4><ul><li><a href="#faq">FAQ</a></li><li><a href="#faq">Livraison</a></li><li><a href="#faq">Retours</a></li><li><a href="https://wa.me/?text=DigiSavoir" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
+<div><h4>Aide</h4><ul><li><a href="#faq">FAQ</a></li><li><a href="#faq">Livraison</a></li><li><a href="#faq">Retours</a></li><li><a href="https://wa.me/22990000000?text=Bonjour%20DigiSavoir%2C%20j%27ai%20une%20question%20sur%20les%20formations" target="_blank" rel="noopener">WhatsApp (SAV)</a></li></ul></div>
 <div><h4>Newsletter</h4><p class="muted" style="font-size:.85rem">Un conseil pratique par semaine, et les dates des prochaines sessions live.</p>
 <form class="news" name="newsletter" method="POST" data-netlify="true" data-netlify-form data-ok="Merci ! Votre code arrive par e-mail."><input type="hidden" name="form-name" value="newsletter"><label class="sr" for="nl-email">E-mail</label><input id="nl-email" type="email" name="email" placeholder="votre@email.com" required><button class="btn btn-acc btn-sm">OK</button></form></div>
 </div>
@@ -374,7 +485,7 @@ p{margin:0 0 1em}
 <div class="overlay" data-close></div>
 <aside class="drawer" aria-hidden="true" aria-label="Panier" role="dialog"><div class="drawer-h"><h2>Votre panier</h2><button class="x" data-close aria-label="Fermer le panier">×</button></div><div class="drawer-b"></div><div class="drawer-f"></div></aside>
 <div class="sticky-buy" aria-label="Achat rapide"></div>
-<a class="wa-float" href="https://wa.me/?text=DigiSavoir%20-%20bonjour%2C%20j%27ai%20une%20question" target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.3-1.7-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.5.1 1.1.5 2.1 1.2 3 1.2 1.8 2.8 3.2 4.7 4 .5.2 1 .4 1.6.5.6.2 1.2.2 1.8.1.7-.1 1.4-.6 1.8-1.2.2-.4.2-.9.1-1.3z"/></svg></a>
+<a class="wa-float" href="https://wa.me/22990000000?text=Bonjour%20DigiSavoir%2C%20j%27ai%20une%20question%20sur%20les%20offres%20Cyber%20Monday" target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.3-1.7-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.5.1 1.1.5 2.1 1.2 3 1.2 1.8 2.8 3.2 4.7 4 .5.2 1 .4 1.6.5.6.2 1.2.2 1.8.1.7-.1 1.4-.6 1.8-1.2.2-.4.2-.9.1-1.3z"/></svg></a>
 <div class="toast" role="status" aria-live="polite"></div>
 <script>
 window.SITE={key:'dgs',brand:'DigiSavoir',title:document.title,lowStock:0,freeShip:0,shipFee:0,noShipText:'Produit numérique : accès immédiat par e-mail et WhatsApp',
@@ -393,21 +504,39 @@ pdpExtra:p=>p.modules?`<div class="curr"><span class="opt-label">Programme · ${
 products:[
 {id:'excel',name:'Excel : du débutant au tableau de bord',cat:'bureautique',catLabel:'Bureautique',price:14900,was:29900,img:'img/excel.webp',rating:4.8,reviews:2140,stock:999,noQty:1,badge:'Best-seller',meta:'6 h · 42 vidéos · certificat',
  short:'Formules, tableaux croisés dynamiques, graphiques et un tableau de bord de ventes complet. Fichiers d\'exercices inclus.',
+ details:['42 vidéos courtes (3 à 8 min) téléchargeables','Fichiers d\'exercices Excel (.xlsx) réels fournis','Tableau de bord de vente prêt pour PME et commerces','Certificat de réussite DigiSavoir avec QR code vérifiable'],
+ reviewsList:[['Carine, assistante de direction · Cotonou','Après la formation Excel, j\'ai automatisé le reporting de mon agence. Promotion 4 mois plus tard.',5],['Rodrigue, gestionnaire de stock · Akpakpa','Les tableaux croisés dynamiques m\'ont fait gagner 4 heures par semaine.',5]],
  modules:[['Prendre en main Excel','45 min','Interface, saisie, mise en forme, raccourcis qui font gagner des heures.'],['Formules essentielles','1 h 20','SOMME, SI, RECHERCHEX, NB.SI : les 12 formules utilisées dans 90 % des cas.'],['Tableaux croisés dynamiques','1 h 10','Analyser des milliers de lignes de ventes en trois clics.'],['Graphiques clairs','50 min','Choisir le bon graphique et le rendre lisible.'],['Projet final : tableau de bord','2 h','Construire le tableau de bord de ventes d\'une boutique de Cotonou, pas à pas.']],cross:['compta','marketing','canva']},
 {id:'marketing',name:'Marketing digital & WhatsApp Business',cat:'business',catLabel:'Business',price:19900,was:39900,img:'img/marketing.webp',rating:4.7,reviews:1605,stock:999,noQty:1,meta:'8 h · 55 vidéos · certificat',
  short:'Facebook, Instagram, TikTok et WhatsApp Business : attirer des clients avec un petit budget publicitaire.',
+ details:['55 vidéos pratiques applicables sur smartphone','Stratégie complète WhatsApp Business & statuts vendeurs','Lancer des campagnes Meta Ads rentables dès 5 000 F/jour','Certificat de compétence en marketing digital'],
+ reviewsList:[['Marc O., commerçant · Cocody (Abidjan)','Je reçois 5 à 10 demandes qualifiées par jour sur WhatsApp depuis que j\'applique la méthode.',5],['Inès, gérante de salon · Cotonou','Mes statuts WhatsApp convertissent enfin en vraies clientes.',4.8]],
  modules:[['Trouver son client idéal','50 min','Persona, promesse, positionnement.'],['Contenu qui vend','1 h 40','Calendrier éditorial, formats courts, écriture persuasive.'],['WhatsApp Business','1 h 30','Catalogue, statuts, listes de diffusion, messages automatiques.'],['Publicité Meta à 5 000 F par jour','2 h','Ciblage, budget, lecture des résultats.'],['Mesurer et ajuster','1 h','Les 5 indicateurs à suivre chaque semaine.']],cross:['boutique','canva','anglais']},
 {id:'boutique',name:'Créer sa boutique en ligne sans coder',cat:'business',catLabel:'E-commerce',price:24900,was:49900,img:'img/boutique.webp',rating:4.8,reviews:980,stock:999,noQty:1,badge:'Nouveau',meta:'7 h · 48 vidéos · certificat',
  short:'De l\'idée à la première vente : fiches produits, photos au smartphone, paiement Mobile Money, livraison.',
+ details:['48 modules vidéo pas à pas de l\'inscription à la vente','Configuration des passerelles Mobile Money locales','Gestion des livreurs, zones tarifaires et suivi des colis','Certificat e-commerce DigiSavoir'],
+ reviewsList:[['Ibrahim, vendeur de sneakers · Lomé','Première vente en ligne 3 semaines après le module boutique. Le paiement MoMo est super bien expliqué.',5],['Prisca, créatrice cosmétique · Calavi','J\'ai pu monter ma boutique sans faire appel à une agence hors de prix.',5]],
  modules:[['Choisir son produit','1 h','Tester une idée avant d\'investir.'],['Monter la boutique','2 h','Pages, fiches produits, photos au smartphone.'],['Encaisser en Mobile Money','1 h','Passerelles de paiement locales, confiance, paiement à la livraison.'],['Logistique','1 h 20','Livreurs, zones, frais, retours.'],['Première vente en 30 jours','1 h 40','Plan d\'action semaine par semaine.']],cross:['marketing','canva','compta']},
 {id:'canva',name:'Canva pro : visuels qui vendent',cat:'bureautique',catLabel:'Design',price:9900,was:19900,img:'img/canva.webp',rating:4.9,reviews:1330,stock:999,noQty:1,meta:'3 h · 25 vidéos · 60 modèles',
- short:'Affiches, statuts WhatsApp, posts et flyers professionnels en 10 minutes. 60 modèles offerts.',cross:['marketing','boutique','excel']},
+ short:'Affiches, statuts WhatsApp, posts et flyers professionnels en 10 minutes. 60 modèles offerts.',
+ details:['25 tutoriels vidéo faciles à reproduire','60 templates Canva prêts pour l\'Afrique de l\'Ouest offerts','Détourage d\'images et retouches smartphone en 1 clic','Certificat de création graphique commerciale'],
+ reviewsList:[['Sika, créatrice de mode · Cotonou','Mes statuts WhatsApp ont enfin un rendu pro. Mes clientes me demandent qui fait mes visuels !',5],['Rodrigue, gérant de restaurant · Akpakpa','J\'ai conçu le menu et l\'affiche de réouverture en 20 minutes chrono.',5]],
+ modules:[['Les bases du design commercial','30 min','Harmonie des couleurs, typographies d\'impact et règles de lisibilité sur mobile.'],['Créer des statuts WhatsApp & posts Instagram','45 min','Formats 1080x1080 et 1080x1920, animations de prix et stickers de vente.'],['Flyers et affiches professionnelles','50 min','Mise en page événementielle, logos, détourage en 1 clic.'],['Pack de 60 modèles prêts à l\'emploi','40 min','Personnalisation rapide pour boutiques, restaurants et services locaux.']],cross:['marketing','boutique','excel']},
 {id:'anglais',name:'Anglais professionnel en 60 jours',cat:'langues',catLabel:'Langues',price:17900,was:34900,img:'img/anglais.webp',rating:4.6,reviews:870,stock:999,noQty:1,meta:'60 leçons · audio · quiz',
- short:'10 minutes par jour pour tenir une réunion, écrire un e-mail et passer un entretien en anglais.',cross:['excel','marketing','compta']},
+ short:'10 minutes par jour pour tenir une réunion, écrire un e-mail et passer un entretien en anglais.',
+ details:['60 leçons audio courtes et fiches mémo PDF','Jeux de rôles pour entretiens d\'embauche et réunions Zoom','Modèles d\'e-mails professionnels prêts à copier-coller','Certificat bilingue professionnel'],
+ reviewsList:[['Aimé, consultant IT · Abidjan Cocody','J\'ai réussi mon entretien avec une ONG anglophone grâce aux simulations de réunions.',5],['Béatrice, étudiante · Dakar','La méthode en 10 minutes par jour est parfaite pour mon emploi du temps.',4.8]],
+ modules:[['E-mails professionnels & formules types','15 leçons','Rédiger des devis, relances et propositions sans fautes.'],['Conduire et participer à une réunion Zoom/Teams','15 leçons','Prendre la parole, exprimer son accord ou désaccord avec aisance.'],['Négocier et pitcher son offre','15 leçons','Présenter ses tarifs et répondre aux objections en anglais.'],['Passer un entretien d\'embauche international','15 leçons','Les questions pièges et réponses valorisantes pour décrocher le poste.']],cross:['excel','marketing','compta']},
 {id:'compta',name:'Comptabilité simplifiée OHADA',cat:'bureautique',catLabel:'Gestion',price:16900,was:32900,img:'img/compta.webp',rating:4.7,reviews:640,stock:999,noQty:1,meta:'5 h · 36 vidéos · modèles Excel',
- short:'Tenir sa comptabilité de petite entreprise selon le référentiel SYSCOHADA, avec des modèles Excel prêts à l\'emploi.',cross:['excel','boutique','marketing']},
+ short:'Tenir sa comptabilité de petite entreprise selon le référentiel SYSCOHADA, avec des modèles Excel prêts à l\'emploi.',
+ details:['Modèles Excel SYSCOHADA pré-paramétrés inclus','Vidéos pas à pas sans jargon mathématique complexe','Calcul automatique du seuil de rentabilité et des marges','Certificat de compétence en gestion de petite entreprise'],
+ reviewsList:[['Koffi, entrepreneur · Fidjrossè','Fini le cahier brouillon : je sais exactement combien ma boutique gagne chaque jour.',5],['Mariam, gérante de commerce · Parakou','Les modèles Excel fournis m\'ont épargné des journées de calcul.',4.9]],
+ modules:[['Fondamentaux du système SYSCOHADA','50 min','Le plan comptable simplifié pour micro et petites entreprises.'],['Journal des achats, ventes et trésorerie','1 h 15','Enregistrer les entrées, sorties et paiements Mobile Money sans erreur.'],['Calcul de la marge et du seuil de rentabilité','1 h','Savoir exactement si votre activité gagne de l\'argent chaque mois.'],['Modèles Excel automatisés prêts à l\'emploi','1 h 30','Remplir votre tableau et générer le bilan simplifié automatiquement.']],cross:['excel','boutique','marketing']},
 {id:'pack-entrepreneur',name:'Pack Entrepreneur (3 formations)',cat:'packs',catLabel:'Pack',price:49900,was:119700,combo:['boutique','marketing','excel'],rating:4.9,reviews:512,stock:999,noQty:1,badge:'-58 %',meta:'21 h · 3 certificats · coaching live',
- short:'Créer sa boutique + Marketing digital + Excel, et une session de coaching live de groupe chaque mois pendant 3 mois.',cross:['canva','compta','anglais']}
+ short:'Créer sa boutique + Marketing digital + Excel, et une session de coaching live de groupe chaque mois pendant 3 mois.',
+ details:['3 formations complètes (21 heures de contenu ultra-actionnable)','3 certificats de réussite individuels avec QR code','3 mois de sessions live mensuelles de coaching en groupe','Accès prioritaire au groupe privé d\'entraide WhatsApp'],
+ reviewsList:[['Jean-Luc, fondateur de marque · Cotonou','Le Pack m\'a permis de lancer ma marque de prêt-à-porter et de faire mes 50 premières ventes en 1 mois.',5],['Amina, e-commerçante · Lomé','Le meilleur investissement de mon année. Le coaching WhatsApp m\'a débloqué sur la pub Meta.',5]],
+ modules:[['Pilier 1 : Créer sa boutique sans coder','7 h','De l\'idée au catalogue, photos smartphone et encaissement MoMo.'],['Pilier 2 : Marketing digital & WhatsApp Business','8 h','Attirer des clients et automatiser ses ventes quotidiennes.'],['Pilier 3 : Excel & Tableaux de bord de gestion','6 h','Suivre ses stocks, marges et rentabilité en direct.'],['Bonus VIP : 3 mois de coaching live en groupe','3 sessions','Questions/réponses en direct chaque mois avec des experts praticiens.']],cross:['canva','compta','anglais']}
 ]};
 
 </script>
@@ -505,11 +634,11 @@ function renderProduct(id){
     ${p.noQty?'':`<div class="qty" role="group" aria-label="Quantité"><button data-q="-1" aria-label="Moins">−</button><output id="qv">1</output><button data-q="1" aria-label="Plus">+</button></div>`}
     <button class="btn btn-acc" data-add-cur>${esc(S.ctaPdp||'Ajouter au panier')} · <span id="pdp-total">${fcfa(p.price)}</span></button>
    </div>
-   <a class="btn btn-wa btn-block" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(`Bonjour ${S.brand}, je souhaite commander : ${p.name} (${fcfa(p.price)}).`)}">${IC.wa.replace('<svg','<svg width="20" height="20"')} Commander sur WhatsApp</a>
+   <a class="btn btn-wa btn-block" target="_blank" rel="noopener" href="https://wa.me/22990000000?text=${encodeURIComponent(`Bonjour ${S.brand}, je souhaite commander la formation : ${p.name} au tarif Cyber Monday (${fcfa(p.price)}).`)}">${IC.wa.replace('<svg','<svg width="20" height="20"')} Commander sur WhatsApp</a>
    <ul class="info-list">
     <li>${IC.truck}<span>${S.delivery}</span></li>
-    <li>${IC.phone}<span>Paiement Mobile Money (MTN, Moov, Wave, Orange) ou à la livraison</span></li>
-    <li>${IC.back}<span>${S.returns||'Échange ou remboursement sous 7 jours'}</span></li>
+    <li>${IC.phone}<span>Paiement Mobile Money instantané (MTN MoMo, Moov, Wave, Orange Money)</span></li>
+    <li>${IC.back}<span>Garantie satisfait ou remboursé 14 jours</span></li>
    </ul>
    <details open><summary>Description</summary><p style="margin-top:.8rem">${p.desc||p.short}</p></details>
    ${p.details?`<details><summary>Détails</summary><ul style="margin-top:.8rem;padding-left:1.1rem">${p.details.map(x=>`<li>${x}</li>`).join('')}</ul></details>`:''}
@@ -549,22 +678,25 @@ function renderCart(){
  if(!cart.length){b.innerHTML=`<div class="empty">${IC.bag.replace('<svg','<svg width="48" height="48" style="margin:0 auto 1rem;opacity:.5"')}<p><b>Votre panier est vide.</b></p><p>${S.emptyCart||'Découvrez nos offres du moment.'}</p><a class="btn btn-acc" href="#/boutique" data-close>Voir la boutique</a></div>`;f.hidden=true;return}
  f.hidden=false;
  const s=sub(),free=S.freeShip,left=Math.max(0,free-s),ship=left?S.shipFee:0,disc=code?Math.round(s*code.pct/100):0;
- b.innerHTML=(!free?`<div class="ship"><span>${S.noShipText||'Aucun frais de livraison'}</span></div>`:`<div class="ship">${left?`<span>Plus que <b>${fcfa(left)}</b> pour la livraison offerte</span>`:`<span>Livraison offerte débloquée</span>`}<div class="bar"><i style="width:${Math.min(100,s/free*100)}%"></i></div></div>`)+
+ const wasSub=cart.reduce((tot,l)=>tot+(P[l.id].was||P[l.id].price)*l.qty,0);
+ const cyberSavings=wasSub-s;
+ b.innerHTML=(!free?`<div class="ship" style="background:rgba(37,99,235,0.06);border:1px dashed rgba(37,99,235,0.25);border-radius:10px;padding:.6rem .8rem"><span>⚡ <b>${S.noShipText||'Accès immédiat par e-mail et WhatsApp'}</b></span></div>`:`<div class="ship">${left?`<span>Plus que <b>${fcfa(left)}</b> pour la livraison offerte</span>`:`<span>Livraison offerte débloquée</span>`}<div class="bar"><i style="width:${Math.min(100,s/free*100)}%"></i></div></div>`)+
  cart.map((l,i)=>{const p=P[l.id];return `<div class="line"><img src="${p.img||P[p.combo[0]].img}" alt="" width="64" height="64"><div><h4>${esc(p.name)}</h4>${l.opt?`<div class="muted" style="font-size:.8rem">${esc(l.opt)}</div>`:''}<div class="qty" style="margin-top:.35rem"><button data-cq="${i}" data-d="-1" aria-label="Moins">−</button><output>${l.qty}</output><button data-cq="${i}" data-d="1" aria-label="Plus">+</button></div></div><div style="text-align:right"><b class="tnum">${fcfa(p.price*l.qty)}</b><br><button class="rm" data-rm="${i}">Retirer</button></div></div>`}).join('');
- f.innerHTML=`<div class="code-row"><input id="code" placeholder="Code promo" aria-label="Code promo" value="${code?code.c:''}"><button class="btn btn-ghost btn-sm" data-code>Appliquer</button></div>
+ f.innerHTML=`<div class="code-row"><input id="code" placeholder="Code promo (ex: SAVOIR10)" aria-label="Code promo" value="${code?code.c:''}"><button class="btn btn-ghost btn-sm" data-code>Appliquer</button></div>
  <div class="tot"><span>Sous-total</span><span class="tnum">${fcfa(s)}</span></div>
- ${disc?`<div class="tot" style="color:var(--acc-text,var(--acc))"><span>Code ${code.c} (-${code.pct} %)</span><span class="tnum">−${fcfa(disc)}</span></div>`:''}
- <div class="tot"><span>${free?'Livraison':'Accès'}</span><span class="tnum">${ship?fcfa(ship):(free?'Offerte':'Immédiat')}</span></div>
- <div class="tot big"><span>Total</span><span class="tnum">${fcfa(s-disc+ship)}</span></div>
+ ${cyberSavings>0?`<div class="tot" style="color:var(--sec);font-size:.9rem"><span>Remise Cyber Monday (-50 %)</span><span class="tnum">−${fcfa(cyberSavings)}</span></div>`:''}
+ ${disc?`<div class="tot" style="color:var(--acc-text,var(--acc));font-size:.9rem"><span>Code ${code.c} (-${code.pct} %)</span><span class="tnum">−${fcfa(disc)}</span></div>`:''}
+ <div class="tot"><span>${free?'Livraison':'Accès'}</span><span class="tnum" style="color:var(--acc-text,var(--acc));font-weight:700">${ship?fcfa(ship):(free?'Offerte':'Immédiat (0 FCFA)')}</span></div>
+ <div class="tot big"><span>Total à régler</span><span class="tnum">${fcfa(s-disc+ship)}</span></div>
  <button class="btn btn-acc btn-block" data-checkout>${esc(S.ctaCheckout||'Valider ma commande')}</button>
- <div class="pay"><span>MTN MoMo</span><span>Moov Money</span><span>Wave</span><span>Orange Money</span><span>À la livraison</span></div>`;
+ <div class="pay"><span>MTN MoMo</span><span>Moov Money</span><span>Wave</span><span>Orange Money</span><span>Accès immédiat</span></div>`;
 }
 document.addEventListener('click',e=>{
  const q=e.target.closest('[data-cq]');if(q){const l=cart[+q.dataset.cq];l.qty+= +q.dataset.d;if(l.qty<1)cart.splice(+q.dataset.cq,1);save();renderCart()}
  const r=e.target.closest('[data-rm]');if(r){cart.splice(+r.dataset.rm,1);save();renderCart()}
  if(e.target.closest('[data-code]')){const v=($('#code').value||'').trim().toUpperCase();const p=S.codes&&S.codes[v];if(p){code={c:v,pct:p};toast(`Code ${v} appliqué : -${p} %`)}else{code=null;toast('Code invalide ou expiré')}renderCart()}
  if(e.target.closest('[data-checkout]')){const lines=cart.map(l=>`${l.qty} × ${P[l.id].name}${l.opt?' ('+l.opt+')':''}`).join(', ');
-  modal(`<h2 style="font-size:1.6rem">Plus qu'une étape</h2><p>Ceci est un <b>site de démonstration</b> : aucun paiement n'est encaissé.</p><p class="muted" style="font-size:.9rem">En production, ce bouton ouvrirait le paiement Mobile Money ou le paiement à la livraison.</p><a class="btn btn-wa btn-block" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(`Bonjour ${S.brand}, je souhaite commander : ${lines}. Total : ${fcfa(sub())}.`)}">Envoyer ma commande sur WhatsApp</a>`)}
+  modal(`<h2 style="font-size:1.5rem;margin-bottom:.5rem">Finaliser votre commande</h2><div style="background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);border-radius:12px;padding:.85rem;margin-bottom:1rem"><p style="margin:0;font-size:.9rem"><b>Site de démonstration :</b> Aucun prélèvement bancaire réel n'est effectué.</p></div><p class="muted" style="font-size:.9rem">En production, vos accès vous sont envoyés par WhatsApp et e-mail dès confirmation Mobile Money.</p><a class="btn btn-wa btn-block" target="_blank" rel="noopener" href="https://wa.me/22990000000?text=${encodeURIComponent(`Bonjour DigiSavoir, je souhaite valider ma commande Cyber Monday : ${lines}. Total : ${fcfa(sub())}.`)}">Envoyer ma commande sur WhatsApp</a>`)}
  if(e.target.closest('[data-open-cart]'))openCart();
  if(e.target.closest('[data-close]')||e.target.classList.contains('overlay'))closeCart();
  const cp=e.target.closest('[data-copy]');if(cp){const t=cp.dataset.copy;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast(`Code ${t} copié`),()=>toast(`Votre code : ${t}`))}
@@ -627,5 +759,6 @@ $('#yr')&&($('#yr').textContent=new Date().getFullYear());
 })();
 
 </script>
+<script src="js/interactive.js"></script>
 </body>
 </html>

@@ -1,0 +1,8 @@
+{
+  "name": "DigiSavoir – Cyber Monday 2026",
+  "description": "Cyber Monday le 30 novembre 2026 : formations Excel, marketing digital, e-commerce, Canva, anglais pro et comptabilité à -50 %. Accès immédiat, à vie, certificat inclus.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
