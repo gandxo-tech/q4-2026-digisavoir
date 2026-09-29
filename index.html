@@ -495,7 +495,7 @@ p{margin:0 0 1em}
 
 <section class="sec" id="avis"><div class="wrap">
  <div class="sec-h rv"><div><span class="eyebrow">Avis</span><h2>Ce qu'ils ont fait après</h2></div></div>
- <div class="reviews rv">
+ <div class="reviews rv" style="margin-bottom:2.5rem">
   <figure class="review"><span class="stars">★★★★★</span><p>« Après la formation Excel, j'ai automatisé le reporting de mon agence. Promotion 4 mois plus tard. »</p><footer>Carine, assistante de direction · Cotonou</footer></figure>
   <figure class="review"><span class="stars">★★★★★</span><p>« Première vente en ligne 3 semaines après le module boutique. Le paiement MoMo est bien expliqué. »</p><footer>Ibrahim, vendeur de sneakers · Lomé</footer></figure>
   <figure class="review"><span class="stars">★★★★★</span><p>« Les vidéos sont courtes, je les regarde dans le zem le matin. »</p><footer>Florence, étudiante · Parakou</footer></figure>
@@ -872,7 +872,7 @@ addEventListener('hashchange',route);
 
 /* ===== reveal ===== */
 let io; function reveal(){ if(!('IntersectionObserver' in window)){$$('.rv').forEach(e=>e.classList.add('in'));return}
- io=io||new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+ io=io||new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px 25% 0px'});
  $$('.rv:not(.in)').forEach(e=>io.observe(e)); }
 
 /* sticky pdp bar visibility */
@@ -889,8 +889,8 @@ $$('[data-grid]').forEach(el=>{const ids=el.dataset.grid.split(',');renderGrid(e
 renderCart();tick();setInterval(tick,1000);route();
 $('#yr')&&($('#yr').textContent=new Date().getFullYear());
 })();
-
 </script>
+
 <script src="js/interactive.js" defer></script>
 </body>
 </html>
