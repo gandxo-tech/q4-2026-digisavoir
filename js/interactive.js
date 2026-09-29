@@ -332,4 +332,39 @@
     }
   }, true);
 
+  // 6. Mobile Navigation Menu Drawer Logic
+  window.openMobileNav = function() {
+    const navDrawer = document.getElementById('mobile-nav-drawer');
+    const overlay = document.querySelector('.overlay');
+    const toggleBtn = document.querySelector('.mobile-menu-btn');
+    if (!navDrawer || !overlay) return;
+
+    navDrawer.classList.add('open');
+    overlay.classList.add('open');
+    navDrawer.setAttribute('aria-hidden', 'false');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
+    setTimeout(() => {
+      const closeBtn = navDrawer.querySelector('.x');
+      if (closeBtn) closeBtn.focus();
+    }, 50);
+  };
+
+  window.closeMobileNav = function() {
+    const navDrawer = document.getElementById('mobile-nav-drawer');
+    const overlay = document.querySelector('.overlay');
+    const toggleBtn = document.querySelector('.mobile-menu-btn');
+    if (!navDrawer || !overlay) return;
+
+    navDrawer.classList.remove('open');
+    overlay.classList.remove('open');
+    navDrawer.setAttribute('aria-hidden', 'true');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+  };
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      window.closeMobileNav();
+    }
+  });
+
 })();
