@@ -885,14 +885,14 @@ function renderCart(){
  const wasSub=cart.reduce((tot,l)=>tot+(P[l.id].was||P[l.id].price)*l.qty,0);
  const cyberSavings=wasSub-s;
  b.innerHTML=(!free?`<div class="ship" style="background:rgba(37,99,235,0.06);border:1px dashed rgba(37,99,235,0.25);border-radius:10px;padding:.6rem .8rem"><span><svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:4px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <b>${S.noShipText||'Accès immédiat par e-mail et WhatsApp'}</b></span></div>`:`<div class="ship">${left?`<span>Plus que <b>${fcfa(left)}</b> pour la livraison offerte</span>`:`<span>Livraison offerte débloquée</span>`}<div class="bar"><i style="width:${Math.min(100,s/free*100)}%"></i></div></div>`)+
- cart.map((l,i)=>{const p=P[l.id];return `<div class="line"><img src="${p.img||P[p.combo[0]].img}" alt="" width="64" height="64"><div><h4>${esc(p.name)}</h4>${l.opt?`<div class="muted" style="font-size:.8rem">${esc(l.opt)}</div>`:''}<div class="qty" style="margin-top:.35rem"><button data-cq="${i}" data-d="-1" aria-label="Moins">−</button><output>${l.qty}</output><button data-cq="${i}" data-d="1" aria-label="Plus">+</button></div></div><div style="text-align:right"><b class="tnum">${fcfa(p.price*l.qty)}</b><br><button class="rm" data-rm="${i}">Retirer</button></div></div>`}).join('');
+ cart.map((l,i)=>{const p=P[l.id];return `<div class="line"><img src="${imgUrl(p.img||P[p.combo[0]].img)}" alt="" width="64" height="64" onerror="this.onerror=null;this.src=fallbackImg"><div><h4>${esc(p.name)}</h4>${l.opt?`<div class="muted" style="font-size:.8rem">${esc(l.opt)}</div>`:''}<div class="qty" style="margin-top:.35rem"><button data-cq="${i}" data-d="-1" aria-label="Moins">−</button><output>${l.qty}</output><button data-cq="${i}" data-d="1" aria-label="Plus">+</button></div></div><div style="text-align:right"><b class="tnum">${fcfa(p.price*l.qty)}</b><br><button class="rm" data-rm="${i}">Retirer</button></div></div>`}).join('');
  f.innerHTML=`<div class="code-row"><input id="code" placeholder="Code promo (ex: SAVOIR10)" aria-label="Code promo" value="${code?code.c:''}"><button class="btn btn-ghost btn-sm" data-code>Appliquer</button></div>
- <div class="tot"><span>Sous-total</span><span class="tnum">${fcfa(s)}</span></div>
- ${cyberSavings>0?`<div class="tot" style="color:var(--sec);font-size:.9rem"><span>Remise Cyber Monday (-50 %)</span><span class="tnum">−${fcfa(cyberSavings)}</span></div>`:''}
- ${disc?`<div class="tot" style="color:var(--acc-text,var(--acc));font-size:.9rem"><span>Code ${code.c} (-${code.pct} %)</span><span class="tnum">−${fcfa(disc)}</span></div>`:''}
- <div class="tot"><span>${free?'Livraison':'Accès'}</span><span class="tnum" style="color:var(--acc-text,var(--acc));font-weight:700">${ship?fcfa(ship):(free?'Offerte':'Immédiat (0 FCFA)')}</span></div>
- <div class="tot big"><span>Total à régler</span><span class="tnum">${fcfa(s-disc+ship)}</span></div>
- <button class="btn btn-acc btn-block" data-checkout>${esc(S.ctaCheckout||'Valider ma commande')}</button>
+ <div class="tot"><span>Prix catalogue habituel</span><span class="tnum"><s>${fcfa(wasSub)}</s></span></div>
+ <div class="tot" style="color:var(--sec);font-size:.9rem"><span>Remise Cyber Monday (-50 %)</span><span class="tnum" style="font-weight:700;color:var(--acc-text,var(--acc))">−${fcfa(cyberSavings)}</span></div>
+ ${disc?`<div class="tot" style="color:var(--acc-text,var(--acc));font-size:.9rem"><span>Code ${code.c} (-${code.pct} %)</span><span class="tnum" style="font-weight:700">−${fcfa(disc)}</span></div>`:''}
+ <div class="tot"><span>Accès formation</span><span class="tnum" style="color:var(--acc-text,var(--acc));font-weight:700">Immédiat par WhatsApp & e-mail</span></div>
+ <div class="tot big"><span>Total Cyber Monday</span><span class="tnum">${fcfa(s-disc)}</span></div>
+ <button class="btn btn-acc btn-block" data-checkout>${esc(S.ctaCheckout||'Recevoir mes accès')}</button>
  <div class="pay"><span>MTN MoMo</span><span>Moov Money</span><span>Wave</span><span>Orange Money</span><span>Accès immédiat</span></div>`;
 }
 document.addEventListener('click',e=>{
