@@ -11,13 +11,16 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Explicit static asset routes with cache control
+app.use('/img', express.static(path.join(__dirname, 'img')));
+app.use('/css', express.static(path.join(__dirname, 'css')));
+app.use('/js', express.static(path.join(__dirname, 'js')));
+app.use(express.static(__dirname));
+
 // Handle Netlify newsletter form post gracefully
 app.post('/', (req, res) => {
   res.status(200).json({ ok: true, message: 'Inscription confirmée' });
 });
-
-// Serve static directory
-app.use(express.static(__dirname));
 
 // Client-side fallback to index.html
 app.get('*', (req, res) => {
