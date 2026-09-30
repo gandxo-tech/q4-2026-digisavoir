@@ -352,7 +352,7 @@ html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
 .hero-cta{display:flex;gap:.75rem;flex-wrap:wrap;margin:1.4rem 0 1rem}
 @media (max-width:540px){.hero-cta{flex-direction:column}.hero-cta .btn{width:100%}}
 .checks{list-style:none;padding:0;display:flex;gap:clamp(.6rem,2vw,1.2rem);flex-wrap:wrap;font-size:clamp(.8rem,2vw,.88rem);font-weight:600;margin:0 0 1.4rem}
-.checks li::before{content:"✓";color:var(--acc);margin-right:.35rem;font-weight:800}
+.checks li::before{content:"";display:inline-block;width:15px;height:15px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310B981' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/contain no-repeat;margin-right:.4rem;vertical-align:-2px}
 .hero-vis{position:relative}
 .hero-vis img{border-radius:clamp(16px,3vw,24px);aspect-ratio:5/4;object-fit:cover;object-position:18% center;box-shadow:0 30px 60px -30px rgba(15,23,42,.35);width:100%;max-height:480px}
 .float{position:absolute;background:#fff;border-radius:14px;padding:clamp(.55rem,2vw,.8rem) clamp(.75rem,2.5vw,1rem);box-shadow:0 12px 30px -10px rgba(15,23,42,.25);display:grid;font-size:clamp(.72rem,2vw,.8rem);color:var(--muted);z-index:2}
@@ -381,8 +381,8 @@ html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
 .ribbon{position:absolute;top:-12px;left:1.8rem;background:var(--acc);color:#fff;font-size:.75rem;font-weight:700;padding:.3rem .7rem;border-radius:999px}
 .pp{display:flex;gap:.6rem;align-items:baseline;margin:1rem 0}.pp b{font-family:var(--fd);font-size:1.9rem}.pp s{color:var(--muted)}
 .plan ul{list-style:none;padding:0;margin:0 0 1.6rem;display:grid;gap:.55rem;flex:1}
-.plan li::before{content:"✓";color:var(--acc);margin-right:.5rem;font-weight:800}
-.plan li.no{color:var(--muted);text-decoration:line-through}.plan li.no::before{content:"–";color:var(--muted)}
+.plan li::before{content:"";display:inline-block;width:15px;height:15px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310B981' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/contain no-repeat;margin-right:.4rem;vertical-align:-2px}
+.plan li.no{color:var(--muted);text-decoration:line-through}.plan li.no::before{background:none;content:"—";color:var(--muted)}
 .steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;counter-reset:s}
 @media (max-width:768px){.steps{grid-template-columns:1fr}}
 .steps li{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(1.1rem,3vw,1.5rem)}
@@ -764,7 +764,12 @@ const IC={
 };
 window.Q4.IC=IC;
 
-function stars(r,n){const f=Math.round(r);return `<span class="stars" aria-label="Note ${String(r).replace('.',',')} sur 5">${'★'.repeat(f)}${'☆'.repeat(5-f)}${n?`<span>(${n})</span>`:''}</span>`}
+function stars(r,n){
+ const f=Math.round(r);
+ const full='<svg width="13" height="13" viewBox="0 0 24 24" fill="#F5A524" style="vertical-align:-1px;margin-right:1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+ const empty='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" style="vertical-align:-1px;margin-right:1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+ return `<span class="stars" aria-label="Note ${String(r).replace('.',',')} sur 5">${full.repeat(f)}${empty.repeat(5-f)}${n?`<span style="margin-left:4px;color:var(--muted);font-size:0.8em">(${n})</span>`:''}</span>`;
+}
 
 /* ===== card ===== */
 function card(p,idx=0){
