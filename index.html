@@ -438,7 +438,7 @@ html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
   <div class="hero-cd"><span class="cd-label" data-cd-label></span><div class="cd" data-cd></div></div>
  </div>
  <div class="hero-vis">
-  <img src="/img/hero.webp" alt="Jeune femme professionnelle d'Afrique de l'Ouest suivant sa formation en ligne sur son ordinateur portable" width="1600" height="900" fetchpriority="high" decoding="async">
+  <img src="img/hero.webp" alt="Jeune femme professionnelle d'Afrique de l'Ouest suivant sa formation en ligne sur son ordinateur portable" width="1600" height="900" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 800 500\'%3E%3Crect width=\'800\' height=\'500\' fill=\'%232563EB\' opacity=\'0.12\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%232563EB\' font-family=\'sans-serif\' font-weight=\'bold\' font-size=\'28\'%3EDigiSavoir · Formations Digitales%3C/text%3E%3C/svg%3E'">
   <div class="float f1"><b>12 480</b><span>professionnels formés</span></div>
   <div class="float f2"><span class="stars">★★★★★</span><b>4,8/5</b><span>7 565 avis vérifiés</span></div>
  </div>
@@ -548,28 +548,28 @@ html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
 
  <div class="guarantee-box rv">
   <div class="guarantee-item">
-    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
     <div>
       <strong>Garantie 14 jours</strong>
       <span>Testez sans risque financier.</span>
     </div>
   </div>
   <div class="guarantee-item">
-    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true" focusable="false"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
     <div>
       <strong>100 % sur smartphone</strong>
       <span>Apprenez où et quand vous voulez.</span>
     </div>
   </div>
   <div class="guarantee-item">
-    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
     <div>
       <strong>Certificat vérifiable</strong>
       <span>Un badge professionnel par QR code.</span>
     </div>
   </div>
   <div class="guarantee-item">
-    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true" focusable="false"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
     <div>
       <strong>Mobile Money direct</strong>
       <span>MoMo, Moov, Wave, Orange Money.</span>
@@ -739,6 +739,8 @@ const S=window.SITE, $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[.
 const fcfa=n=>new Intl.NumberFormat('fr-FR',{style:'currency',currency:'XOF',maximumFractionDigits:0}).format(Math.round(n));
 const pct=(was,now)=>Math.round((1-now/was)*100);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const imgUrl=path=>!path?'':path.startsWith('/img/')?'img/'+path.slice(5):path;
+const fallbackImg='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect width="400" height="300" fill="%232563EB" opacity="0.1"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%232563EB" font-family="sans-serif" font-weight="bold" font-size="20"%3EDigiSavoir Formation%3C/text%3E%3C/svg%3E';
 const P=Object.fromEntries(S.products.map(p=>[p.id,p]));
 const qs=new URLSearchParams(location.search);
 const DEMO=qs.get('demo');
@@ -764,10 +766,10 @@ function stars(r,n){const f=Math.round(r);return `<span class="stars" aria-label
 function card(p,idx=0){
  const d=p.was?pct(p.was,p.price):0;
  const badge=p.badge||(d?`-${d} %`:'');
- const img=p.combo?p.combo.map(i=>P[i].img)[0]:p.img;
+ const img=imgUrl(p.combo?p.combo.map(i=>P[i].img)[0]:p.img);
  return `<article class="card ${S.cardClass||''}" data-id="${p.id}" style="--stagger-index:${idx}">
   <div class="card-media">${badge?`<span class="badge">${esc(badge)}</span>`:''}${p.tag?`<span class="badge alt">${esc(p.tag)}</span>`:''}
-   ${p.combo?`<div style="display:grid;grid-template-columns:1fr 1fr;height:100%;gap:2px">${p.combo.map(i=>`<img src="${P[i].img}" alt="" decoding="async" width="300" height="300" style="height:100%;object-fit:cover">`).join('')}</div>`:`<img src="${img}" alt="${esc(p.alt||p.name)}" decoding="async" width="600" height="600">`}
+   ${p.combo?`<div style="display:grid;grid-template-columns:1fr 1fr;height:100%;gap:2px">${p.combo.map(i=>`<img src="${imgUrl(P[i].img)}" alt="" decoding="async" width="300" height="300" style="height:100%;object-fit:cover" onerror="this.onerror=null;this.src=fallbackImg">`).join('')}</div>`:`<img src="${img}" alt="${esc(p.alt||p.name)}" decoding="async" width="600" height="600" onerror="this.onerror=null;this.src=fallbackImg">`}
   </div>
   <div class="card-body">
    <span class="card-cat">${esc(p.catLabel||p.cat)}</span>
@@ -812,7 +814,7 @@ function renderProduct(id){
  v.innerHTML=`<div class="wrap">
  <nav class="crumbs" aria-label="Fil d'Ariane"><a href="#/">Accueil</a> / <a href="#/boutique">Boutique</a> / <a href="#/boutique/${p.cat}">${esc(p.catLabel||p.cat)}</a> / <span aria-current="page">${esc(p.name)}</span></nav>
  <div class="pdp">
-  <div class="pdp-media ${p.combo?'combo':''}">${p.combo?p.combo.map(i=>`<img src="${P[i].img}" alt="${esc(P[i].name)}" width="600" height="600">`).join(''):`<img src="${p.img}" alt="${esc(p.alt||p.name)}" width="900" height="900" fetchpriority="high">`}</div>
+  <div class="pdp-media ${p.combo?'combo':''}">${p.combo?p.combo.map(i=>`<img src="${imgUrl(P[i].img)}" alt="${esc(P[i].name)}" width="600" height="600" onerror="this.onerror=null;this.src=fallbackImg">`).join(''):`<img src="${imgUrl(p.img)}" alt="${esc(p.alt||p.name)}" width="900" height="900" fetchpriority="high" onerror="this.onerror=null;this.src=fallbackImg">`}</div>
   <div>
    <span class="eyebrow">${esc(p.catLabel||p.cat)}</span>
    <h1 tabindex="-1">${esc(p.name)}</h1>
