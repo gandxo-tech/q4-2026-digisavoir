@@ -464,7 +464,7 @@ html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
 
 <section class="logos"><div class="wrap"><p>Nos apprenants travaillent chez</p><div class="lg"><span>Banque Atlantique*</span><span>Startup Lab</span><span>Groupe Sahel</span><span>ONG Terra</span><span>Boutiques Nana</span></div><p class="tiny">* Marques fictives</p></div></section>
 
-<section class="sec"><div class="wrap">
+<section class="sec" id="catalogue-home"><div class="wrap">
  <div class="quiz-banner rv">
    <div class="quiz-banner-text">
      <span class="calli-badge">Orientation express en 30 s</span>
@@ -473,8 +473,8 @@ html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
    </div>
    <button class="btn btn-acc" onclick="window.openDigiQuiz()">Faire le quiz (30 s) &rarr;</button>
  </div>
- <div class="sec-h rv"><div><span class="eyebrow">Formations</span><h2>Les plus demandées ce Cyber Monday</h2></div><a class="btn btn-ghost btn-sm" href="#/boutique">Tout voir</a></div>
- <div class="grid rv" data-grid="excel,marketing,boutique,canva"></div>
+ <div class="sec-h rv"><div><span class="eyebrow">Formations</span><h2>Les plus demandées ce Cyber Monday</h2></div><a class="btn btn-ghost btn-sm" href="#/boutique">Tout voir (11 formations) &rarr;</a></div>
+ <div class="grid rv" data-grid="excel,marketing,boutique,canva,anglais,compta,pack-entrepreneur,ia-design"></div>
 </div></section>
 
 <section class="sec plans-sec" id="formules"><div class="wrap">
@@ -896,7 +896,7 @@ function route(){
      setTimeout(()=>{
        const target=document.getElementById(id);
        if(target) target.scrollIntoView({behavior:'smooth'});
-     },50);
+     },30);
    } else if(t){
      t.scrollIntoView({behavior:'smooth'});
    }
@@ -905,17 +905,40 @@ function route(){
  const parts=(h.slice(2)||'').split('/'),view=parts[0],arg=parts[1];
  const v=view==='boutique'?'shop':view==='produit'?'product':'home';
  show(v);
- if(v==='shop'){renderShop(arg||'all');document.title=`Boutique – ${S.brand}`}
+ if(v==='shop'){renderShop(arg||'all');document.title=`Formations – ${S.brand}`}
  else if(v==='product')renderProduct(arg);
  else document.title=S.title;
  $$('.nav a').forEach(a=>a.toggleAttribute('aria-current',a.getAttribute('href')===(h||'#/')));
  if(v!=='product')$('.sticky-buy').classList.remove('show');
  closeCart(); window.scrollTo(0,0);
- const hh=$(`[data-view="${v}"] h1`); if(hh&&v!=='home'){hh.setAttribute('tabindex','-1');hh.focus({preventScroll:true})}
+ const hh=$(`[data-view="${v}"] h1`); if(hh&&v!=='home'){hh.setAttribute('tabindex','-1');try{hh.focus({preventScroll:true})}catch(e){}}
  S.onRoute&&S.onRoute(v,arg); reveal();
 }
-function show(v){$$('[data-view]').forEach(s=>s.hidden=s.dataset.view!==v);document.body.classList.toggle('on-pdp',v==='product')}
+function show(v){
+ $$('[data-view]').forEach(s=>{
+   s.hidden=s.dataset.view!==v;
+   if(s.dataset.view===v){
+     s.style.display='block';
+   } else {
+     s.style.display='none';
+   }
+ });
+ document.body.classList.toggle('on-pdp',v==='product');
+}
 addEventListener('hashchange',route);
+
+// Force route navigation even when clicking the same hash or navigating across views
+document.addEventListener('click',e=>{
+ const a=e.target.closest('a[href^="#"]');
+ if(a&&!a.closest('.drawer')&&!a.closest('.modal-card')){
+   const href=a.getAttribute('href');
+   if(href.startsWith('#/')){
+     if(location.hash===href){
+       route();
+     }
+   }
+ }
+});
 
 /* ===== reveal ===== */
 function reveal(){ $$('.rv').forEach(e=>e.classList.add('in')); }
